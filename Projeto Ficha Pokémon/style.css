@@ -1,0 +1,304 @@
+/*=====ESTRUTURA GERAL DA FICHA=====*/
+html{
+	overflow-x: hidden;
+}
+
+body{
+	background-color: #00669e;
+	padding: 20px;
+}
+
+ul{
+	list-style: none;
+	/*position: relative;*/
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
+.estrutura-ficha{
+	display: flex;
+	margin-left: 10%;
+}
+
+.abas{
+	background-color: #007bd4;
+	width: 73px;
+	height: 73px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.corpo{
+	background-color: #83b2d4;
+	font-family: 'Roboto', sans-serif;
+	width: 777px;
+	padding: 10px;
+	position: absolute;
+	visibility: hidden;
+}
+
+/*=====CABEÇALHO=====*/
+.cabecalho-ficha{
+	font-variant: small-caps;
+	text-align: center;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0 20px;
+	border-bottom: 2px solid #5e98c2;
+}
+
+.apelido-pokemon{
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.sexo-pokemon-feminino, .sexo-pokemon-masculino{
+	display: inline-flex;
+	width: 24px;
+	height: 24px;
+	color: #FFF;
+	justify-content: center;
+	align-items: center;
+	margin-left: 10px;
+	border-radius: 100%;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+}
+
+.sexo-pokemon-feminino{
+	background-color: #c62626;
+}
+
+.sexo-pokemon-masculino{
+	background-color: #1c289a;
+}
+
+.valign{ /*Classe feita apenas para alinhar elementos verticalmente*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.especie-pokemon{
+	font-size: 20px;
+}
+
+.numero-pokemon{
+	font-size: 13px;
+}
+
+.especie-pokemon, .numero-pokemon, .apelido-pokemon{
+	color: #0f0457;
+}
+
+.tipagem-water, .tipagem-electric{
+	font-weight: bold;
+	display: inline-block;
+	padding: 5px 10px;
+	font-size: 17px;
+	margin-top: 10px;
+	border-radius: 5px;
+}
+
+.tipagem-water{
+	color: #445e9c;
+	background-color: #9db7f5;
+	border: solid 2px #445e9c;
+}
+
+.tipagem-electric{
+	color: #A1871F;
+	background-color: #FAE078;
+	border: solid 2px #A1871F;
+}
+
+.nenhuma-tipagem{
+	display: none;
+}
+
+.nivel-pokemon{
+	font-weight: bold;
+	font-size: 24px;
+	color: #413881;
+	margin-left: 10px;
+}
+
+.estrutura-hp{
+	display: flex;
+	height: 22px;
+	margin: 10px 0;
+}
+
+.titulo-barra{
+	width: 40px;
+	display: flex;
+	align-items: flex-end;
+	/*height: 22px;*/
+	background-color: #3010f5;
+}
+
+.titulo-barra, .status-pokemon{
+	color: #FFF;
+	font-weight: bold;
+}
+
+.titulo-barra, .barra-hp-total{
+	justify-content: center;
+}
+
+.barra-hp-total{
+	width: 138px;
+	/*height: 22px;*/
+	background-color: #486c33;
+}
+
+.barra-hp-atual{
+	height: 22px;
+	background-color: #78b355;
+}
+
+.hp-pokemon{
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	height: 22px;
+	color: #FFF;
+	margin-top: -22px; /*Para fazer o elemento ficar dentro da barra, mas sem se mover conforme o HP for caindo.*/
+}
+
+.status-pokemon{
+	height: 25px;
+	font-size: 14px;
+	background-color: #6da34d;
+	width: 127px;
+	letter-spacing: 1.5px;
+	margin-top: 10px;
+	justify-content: center;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+/*=====INFORMAÇÕES GERAIS=====*/
+.informacoes-gerais{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+	margin: 10px 20px;
+}
+
+.titulo-informacao{
+	font-variant: small-caps;
+	color: #413881;
+}
+
+.estrutura-habilidade, .espaco-informacao{
+	background-color: #bbd0dc;
+	box-sizing: border-box;
+	padding: 5px;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+}
+
+.estrutura-habilidade{
+	width: 277px;
+}
+
+.espaco-informacao{
+	width: 174px;
+}
+
+.habilidade-pokemon, .informacao-destaque{
+	color: #413881;
+	font-size: 20px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.habilidade-pokemon{
+	font-size: 20px;
+	border-bottom: solid 2px #86abc5;
+	padding: 5px;
+}
+
+.descricao-habilidade{
+	margin-top: 5px;
+	font-size: 12px;
+	color: #413881;
+	line-height: 18px;
+}
+
+.informacao-destaque{
+	font-size: 16px;
+}
+
+/*=====EXPERIÊNCIA=====*/
+.estrutura-exp{
+	margin: 10px 20px;
+	position: relative;
+	left: 20%;
+}
+
+.barra-exp-total{
+	width: 422px;
+	height: 22px;
+	background-color: #0a0237;
+}
+
+.barra-exp-atual{
+	height: 22px;
+	background-color: #1e07a9;
+}
+
+.exp-pokemon{
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	height: 22px;
+	color: #FFF;
+	margin-top: -22px; /*Para fazer o elemento ficar dentro da barra, mas sem se mover conforme o HP for caindo.*/
+}
+
+.exp-atual{
+	cursor: pointer;
+}
+
+.exp-atual:hover{
+	color: #bbd0dc;
+}
+
+.editar-exp{
+	display: none;
+	width: 70px;
+}
+
+.aplicar-alteracoes, .cancelar-alteracoes{
+	font-size: 15px;
+	padding: 5px;
+	color: #FFF;
+	border: none;
+	margin-top: 10px;
+	display: none;
+}
+
+.aplicar-alteracoes{
+	background-color: #6da34d;
+}
+
+.aplicar-alteracoes:hover{
+	background-color: #486c33;
+}
+
+.cancelar-alteracoes{
+	background-color: #c72626
+}
+
+.cancelar-alteracoes:hover{
+	background-color: #791717
+}
